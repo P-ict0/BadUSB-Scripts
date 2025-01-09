@@ -1,0 +1,15 @@
+REM Opens a webpage in iPhone with fake virus
+REM Author: P-ict0 (https://github.com/P-ict0)
+
+DELAY 100
+GUI h
+DELAY 1000
+GUI SPACE
+DELAY 250
+STRING https://pranx.com/fake-virus/
+DELAY 70
+TAB
+DELAY 70
+ENTER
+DELAY 150
+ENTER

