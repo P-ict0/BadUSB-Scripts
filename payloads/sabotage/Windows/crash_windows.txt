@@ -1,9 +1,11 @@
 REM ------------------------------------
+REM Description: Trigger BSoD on Windows
 REM Author: P-ict0 (https://github.com/P-ict0)
+REM Date: 11/01/2025
 REM ------------------------------------
 REM This script:
-REM Opens an admin powershell terminal
-REM Crashes Windows with a bluescreen and forces a reboot
+REM 1. Opens an admin powershell terminal
+REM 2. Crashes Windows with a bluescreen and forces a reboot
 REM ------------------------------------
 
 DEFAULT_DELAY 100
