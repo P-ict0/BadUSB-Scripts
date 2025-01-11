@@ -1,6 +1,12 @@
-REM Title: Simple max volume rickroll
-REM Author: P-ict0 (https://github.com/P-ict0)
+REM ------------------------------------
 REM Description: Turns up the volume to 100% and opens rickroll in default browser, all in one command
+REM Author: P-ict0 (https://github.com/P-ict0)
+REM Date: 11/01/2025
+REM ------------------------------------
+REM This script:
+REM 1. Turns volume up to 100%
+REM 2. Opens Rickroll video in the default browser and plays inmediately, without ads
+REM ------------------------------------
 
 DELAY 100
 
