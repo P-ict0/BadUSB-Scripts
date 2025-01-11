@@ -1,12 +1,13 @@
 REM ------------------------------------
 REM Description: Changes wallpaper to a France image
 REM Author: P-ict0 (https://github.com/P-ict0)
+REM Date: 11/01/2025
 REM ------------------------------------
 REM This script:
 REM 1. Opens a powershell terminal
-REM 2. Fetches an image from this repo
-REM 3. Fetches a script from this repo to get the image and change the wallpaper
-REM 4. Removes the image 
+REM 2. Fetches a script from this repo and runs it
+REM 3. Changes your wallpaper to a French flag
+REM 4. Removes the original image
 REM ------------------------------------
 
 DELAY 100
