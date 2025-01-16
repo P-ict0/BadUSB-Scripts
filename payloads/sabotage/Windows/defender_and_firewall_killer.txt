@@ -39,7 +39,7 @@ CONTROL ESCAPE
 DELAY 100
 STRING Windows Security
 ENTER
-DELAY 400
+DELAY 900
 
 REM ---------- Navigate to Real time protection ----------
 TAB
