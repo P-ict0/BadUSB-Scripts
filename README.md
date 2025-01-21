@@ -4,6 +4,6 @@ This repository contains BadUSB scripts designed for the Flipper Zero. These scr
 
 ## ⚠️ Disclaimer
 
-The payloads in this repository are provided **solely for educational purposes**. Flipper Zero gear is designed for authorized auditing and security analysis in compliance with applicable local and international laws. Users are fully responsible for ensuring adherence to the laws of their jurisdiction. **Unauthorized or unlawful use is strictly prohibited**, and no responsibility is claimed for such actions.
+The payloads in this repository are provided **solely for educational purposes**. Flipper Zero gear is designed for authorized auditing and security analysis in compliance with applicable local and international laws. Users are fully responsible for ensuring adherence to the laws of their jurisdiction. **Unauthorized or unlawful use is strictly prohibited**, and I claim no responsibility for such actions.
 
 As with any script, users should exercise caution. Payloads **may execute commands on your device, potentially causing damage**. All payloads in this repository are provided as-is without any warranties or guarantees.

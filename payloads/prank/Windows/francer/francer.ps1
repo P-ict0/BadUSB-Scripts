@@ -1,4 +1,4 @@
-$imageUrl = "https://raw.githubusercontent.com/P-ict0/BadUSB-Scripts/refs/heads/main/helpers/francer/france.png?raw=true"
+$imageUrl = "https://raw.githubusercontent.com/P-ict0/BadUSB-Scripts/refs/heads/main/payloads/prank/Windows/francer/france.png?raw=true"
 $outputPath = Join-Path -Path $env:TEMP -ChildPath 'france.png'
 
 Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath

