@@ -1,6 +1,6 @@
 # 😈 BadUSB Scripts
 
-This repository contains BadUSB scripts designed for the Flipper Zero. These scripts are personally developed and tailored for various purposes. Contributions are welcome. Feel free to submit pull requests to suggest improvements or share your own scripts for inclusion.
+This repository contains BadUSB scripts designed for the Flipper Zero. Most of these scripts are completely personally developed and tailored for various purposes. Contributions are welcome. Feel free to submit pull requests to suggest improvements or share your own scripts for inclusion.
 
 ## ⚠️ Disclaimer
 
